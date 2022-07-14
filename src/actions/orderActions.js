@@ -2,8 +2,9 @@ import {
   GET_ORDERS_BEGIN,
   GET_ORDERS_SUCCESS,
   GET_ORDERS_FAILURE,
+  SET_SEARCH_QUERY,
 } from "./types";
-import {orders} from "../data";
+import { orders } from "../data";
 
 // ACTION CREATORS
 export const getOrdersBegin = () => ({
@@ -20,12 +21,17 @@ export const getOrdersFailure = (error) => ({
   payload: error,
 });
 
+export const setSearchQuery = (query) => ({
+  type: SET_SEARCH_QUERY,
+  payload: query,
+});
+
 export function getOrders() {
-    return async function (dispatch) {
-        await dispatch(getOrdersBegin());
-        await dispatch(getOrdersSuccess(orders));
-        if(!orders) {
-            await dispatch(getOrdersFailure("Internal Server Error 500!"));
-        }
-    };
-  }
+  return async function (dispatch) {
+    await dispatch(getOrdersBegin());
+    await dispatch(getOrdersSuccess(orders));
+    if (!orders) {
+      await dispatch(getOrdersFailure("Internal Server Error 500!"));
+    }
+  };
+}

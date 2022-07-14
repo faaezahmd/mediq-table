@@ -1,0 +1,64 @@
+.orders-table {
+  border-collapse: collapse;
+  .order-options-dropdown {
+    border: 0;
+    padding: 0;
+    background: none;
+    display: flex;
+    align-items: center;
+    > div {
+      height: 5px;
+      width: 5px;
+      border-radius: 50%;
+      background-color: #dadadd;
+      &:not(:last-of-type) {
+        margin-right: 2px;
+      }
+    }
+  }
+  .status {
+    display: flex;
+    align-items: center;
+    &::before {
+      content: " ";
+      display: block;
+      height: 7px;
+      width: 7px;
+      border-radius: 50%;
+      margin-right: 7px;
+    }
+    &.fulfilled {
+      &::before {
+        background-color: green;
+      }
+    }
+    &.verified {
+      &::before {
+        background-color: blue;
+      }
+    }
+    &.unverified {
+      &::before {
+        background-color: orange;
+      }
+    }
+  }
+  thead {
+    background: #ededf3;
+    th {
+      color: #5b536a;
+      font-weight: 500;
+      padding: 18px 12px;
+    }
+  }
+  tbody {
+    color: #65536a;
+    tr {
+      border: 1px solid #ededf3;
+      background: #fff;
+      td {
+        padding: 18px 12px;
+      }
+    }
+  }
+}
