@@ -5,7 +5,12 @@ function App() {
   return (
     <div className="App">
       <nav>
-        <Link to="/orders">Orders</Link>
+        <Link
+          to="/orders"
+          style={{ "font-size": "21px", padding: "12px", display: "block" }}
+        >
+          Orders
+        </Link>
       </nav>
     </div>
   );

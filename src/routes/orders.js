@@ -5,10 +5,9 @@ const Orders = (props) => {
   return (
     <div className="orders">
       <div className="container">
-
-      <h1>Orders</h1>
-      <SearchBar />
-      <OrdersTable />
+        <h1 style={{ "text-align": "center" }}>Orders</h1>
+        <SearchBar />
+        <OrdersTable />
       </div>
     </div>
   );
