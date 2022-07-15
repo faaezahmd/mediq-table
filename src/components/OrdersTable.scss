@@ -1,5 +1,8 @@
 .orders-table {
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  margin-top: -12px;
+  width: 100%;
   .order-options-dropdown {
     border: 0;
     padding: 0;
@@ -54,11 +57,25 @@
   tbody {
     color: #65536a;
     tr {
-      border: 1px solid #ededf3;
       background: #fff;
+      box-shadow: 0px 2px 4px 0px rgb(0 0 0 / 5%);
       td {
         padding: 18px 12px;
       }
     }
+    &:first-child td:first-child {
+      border-top-left-radius: 5px;
+    }
+    &:first-child td:last-child {
+      border-top-right-radius: 5px;
+    }
+
+    &:last-child td:first-child {
+      border-bottom-left-radius: 5px;
+    }
+    &:last-child td:last-child {
+      border-bottom-right-radius: 5px;
+    }
+    
   }
 }

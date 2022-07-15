@@ -1,5 +1,16 @@
 .search-bar {
   .search-input {
-    height: 54px;
+    height: 57px;
+    border: none;
+    width: 100%;
+    padding: 5px 15px;
+    font-size: 16px;
+    color: #393b42;
+    &::placeholder {
+      color: #9ea6c1;
+    }
+    &:focus {
+      outline: 1px #ededf3;
+    }
   }
 }
